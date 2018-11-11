@@ -1,13 +1,10 @@
-An EDA of White Wine Data by Pranath Fernando
+An EDA of White Wine Data
 ================
 Pranath Fernando
 November 11th, 2018
 
-An EDA of White Wine Data by Pranath Fernando
-=============================================
-
 Introduction
-------------
+============
 
 In this exploration I will be examining a data set of white wine data to try to determine which chemical properties of wine may be useful in helping to predict it's quality.
 
@@ -50,7 +47,7 @@ The dataset consists of 4898 observations of 13 variables which are:
 Variables to be explored highlighted in bold.
 
 Univariate Plots
-----------------
+================
 
 ``` r
 # Load initial libraries install.packages('ggplot2')
@@ -504,7 +501,7 @@ qplot(x = alcohol, data = wine) + ylab("Number of wines") + scale_x_log10()
 This does not appear to have transformed the data in any significant way.
 
 Univariate Analysis
--------------------
+===================
 
 ### Dataset structure
 
@@ -554,7 +551,7 @@ The log transformed volatile acidity turned a skewed distribution into a more no
 I often zoomed in on the core of distributions. especially in cases where the data was squewed or had extereme outliers. I also adjusted bin width to be mor granualar when zooming in on an area of intrerest.
 
 Bivariate Plots
----------------
+===============
 
 ``` r
 # Load new libraries install.packages('ggcorrplot')
@@ -789,7 +786,7 @@ Furthermore, for plot 1, it shows us not only what a narrow band of values for a
 For plot 2, it really makes clear to us how many extreme outliers there are for density values at the high end, as well as how closely the bulk of the values are negatively correlated with each other for these two variables.
 
 Bivariate Analysis
-------------------
+==================
 
 In my explorations I looked at the bi-variate relationships between 3 variables: quality, density & alcohol.
 
@@ -802,7 +799,7 @@ There was a strong relationship observed between alcohol & density.
 The strongest relationship observed was the negative correlation between alcohol & density (-0.8).
 
 Multivariate Plots
-------------------
+==================
 
 In our bi-variate analyses we observed some interesting differences between 'low quality wines' (quality 1-4) and 'high quality wines' (quality 5-10).
 
@@ -996,7 +993,7 @@ While low values of this ratio are more likely to be high quality wines, high va
 However, a regression model may have more success in using several of these highlighted variables in order to make better predictions of wine quality.
 
 Multivariate Analysis
----------------------
+=====================
 
 Further to my findings in my bi-variate analysis, when grouping wines into 'low' and 'high' quality wines to see if these could be better predicted by other variables, I found that different variables were better for predicting low quality wines than were for predicting high quality wines.
 
@@ -1013,7 +1010,7 @@ This is of course a very simplistic model with just two terms, while it was perh
 ------------------------------------------------------------------------
 
 Final Plots and Summary
------------------------
+=======================
 
 ### Plot One
 
@@ -1088,7 +1085,7 @@ In particular, we can see how more high quality wines tend to have higher alchoh
 ------------------------------------------------------------------------
 
 Conclusion
-----------
+==========
 
 The uni-variate analysis revealed some starightforward patterns of the variables. Howver the bi-variate explorations onwards revealled some interesting relationships.
 
